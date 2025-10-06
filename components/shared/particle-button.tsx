@@ -28,7 +28,7 @@ export function ParticleButton({ children, className, variant, size }: ParticleB
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);
   const particleIdRef = useRef(0);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
 
   const colors = ["#8B5CF6", "#518BF5", "#06B6D4", "#A78BFA", "#60A5FA"];
 
