@@ -7,7 +7,7 @@ import { useRef } from "react";
 import Link from "next/link";
 
 export default function PricingSection() {
-  const pricingRef = useRef<HTMLElement>(null);
+  const pricingRef = useRef<HTMLElement>(null as unknown as HTMLElement);
   
   const revealVariants = {
     visible: (i: number) => ({
