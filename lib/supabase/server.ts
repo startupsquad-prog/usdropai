@@ -16,7 +16,7 @@ export async function createServerClient() {
         storage: {
           getItem: async (key: string) => {
             const cookie = cookieStore.get(key);
-            return cookie?.value;
+            return cookie?.value ?? null;
           },
           setItem: async (key: string, value: string) => {
             cookieStore.set(key, value, {
