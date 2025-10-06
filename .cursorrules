@@ -1,0 +1,104 @@
+# Cursor AI Rules for USDrop - SaaS Application
+
+## Icon & Vector Guidelines
+icons:
+  default_library: "lucide-react"
+  usage_pattern: "import { IconName } from 'lucide-react';"
+  allowed_folders: ["components/ui/icons", "components/shared", "components/dashboard"]
+  disallowed: ["emojis", "unicode", "font-awesome"]
+  
+vectors:
+  default_library: "custom-svg"
+  usage_pattern: "import { VectorName } from '@/components/ui/vectors';"
+  color_sync: "use Tailwind's text-foreground / fill-primary"
+  
+animations:
+  provider: "framer-motion"
+  rules:
+    default_duration: 0.3
+    easing: "easeInOut"
+    prefer_spring: true
+
+## Design System Rules
+design_tokens:
+  colors:
+    primary: "#1E40AF"
+    primary_light: "#3B82F6"
+    accent: "#06B6D4"
+    success: "#10B981"
+    danger: "#EF4444"
+    warning: "#F59E0B"
+  radius:
+    default: "0.125rem"
+    card: "1rem"
+    button: "0.5rem"
+  
+styling:
+  - Always use Tailwind CSS classes
+  - Never use inline styles
+  - Reference design tokens from lib/design-system/
+  - Use ShadCN UI components as base
+  
+## Component Guidelines
+components:
+  - Use TypeScript for all components
+  - Export default for pages, named exports for components
+  - Include proper prop types with interfaces
+  - Use "use client" directive for client components
+  
+icons_mapping:
+  orders: "Package"
+  sales: "TrendingUp"
+  products: "Box"
+  analytics: "BarChart3"
+  settings: "Settings"
+  stores: "Store"
+  suppliers: "Building2"
+  dashboard: "LayoutDashboard"
+  ai_discovery: "Sparkles"
+  search: "Search"
+  filter: "SlidersHorizontal"
+  sort: "ArrowUpDown"
+  notifications: "Bell"
+  user: "User"
+  logout: "LogOut"
+  menu: "PanelLeft"
+  shopping_cart: "ShoppingCart"
+  money: "DollarSign"
+  profit: "TrendingUp"
+  growth: "ArrowUpRight"
+  competition: "Target"
+  chart: "LineChart"
+  
+## Code Quality Rules
+formatting:
+  - Use 2 spaces for indentation
+  - Maximum line length: 100 characters
+  - Always use semicolons
+  - Prefer const over let
+  
+imports:
+  - Group imports: React, Next, external libraries, internal components
+  - Use absolute imports with @ alias
+  - Avoid default exports for components (except pages)
+  
+## Prohibited Practices
+do_not:
+  - ❌ Use emojis in production code (💰, 📈, 🛒, etc.)
+  - ❌ Hard-code colors (use Tailwind classes)
+  - ❌ Create inline styles
+  - ❌ Use any or unknown types
+  - ❌ Leave console.log in production
+  - ❌ Create files outside established structure
+  
+## Preferred Practices
+do:
+  - ✅ Use Lucide React icons exclusively
+  - ✅ Reference design tokens
+  - ✅ Write TypeScript interfaces
+  - ✅ Use proper semantic HTML
+  - ✅ Add accessibility attributes
+  - ✅ Include error boundaries
+  - ✅ Handle loading states
+  - ✅ Validate user input
+

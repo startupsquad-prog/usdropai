@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import PricingSection from "@/components/ui/pricing-section-2";
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,8 +38,12 @@ export default function HomePage() {
 
           {/* Auth Actions */}
           <div className="topbar-actions">
-            <button className="btn-ghost">Login</button>
-            <button className="btn-cta">Sign Up</button>
+            <Link href="/auth/login">
+              <button className="btn-ghost">Login</button>
+            </Link>
+            <Link href="/auth/signup">
+              <button className="btn-cta">Sign Up</button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -89,24 +94,26 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="hero-cta-group">
-              <button className="btn-hero-primary">
-                <span>Start Free</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.5 15L12.5 10L7.5 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <Link href="/auth/signup">
+                <button className="btn-hero-primary">
+                  <span>Start Free</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 15L12.5 10L7.5 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </Link>
               <button className="btn-hero-secondary">
                 <svg
                   width="20"
@@ -223,23 +230,25 @@ export default function HomePage() {
               </div>
 
               {/* Secondary CTA */}
-              <button className="product-cta-secondary">
-                <span>See It in Action</span>
-                <svg
-                  className="product-cta-icon"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.5 15L12.5 10L7.5 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <Link href="/auth/signup">
+                <button className="product-cta-secondary">
+                  <span>See It in Action</span>
+                  <svg
+                    className="product-cta-icon"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 15L12.5 10L7.5 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -429,170 +438,32 @@ export default function HomePage() {
             <p className="how-it-works-cta-text">
               Ready to simplify your dropshipping?
             </p>
-            <button className="btn-hero-primary">
-              <span>Start Free Trial</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.5 15L12.5 10L7.5 5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <Link href="/auth/signup">
+              <button className="btn-hero-primary">
+                <span>Start Free Trial</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.5 15L12.5 10L7.5 5"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Pricing Plans */}
-      <section className="pricing-section">
-        <div className="pricing-container">
-          {/* Header */}
-          <div className="pricing-header">
-            <h2 className="pricing-heading">
-              Simple Pricing.{" "}
-              <span className="hero-gradient-text">Scale at Your Speed.</span>
-            </h2>
-            <p className="pricing-subtext">
-              Start free. Upgrade as you grow. No hidden fees.
-            </p>
-          </div>
-
-          {/* Pricing Grid */}
-          <div className="pricing-grid">
-            {/* Starter Plan */}
-            <div className="pricing-card">
-              <div className="pricing-plan-icon">🔹</div>
-              <h3 className="pricing-plan-name">Starter</h3>
-              <p className="pricing-plan-description">For beginners</p>
-
-              <div className="pricing-price-wrapper">
-                <div className="pricing-price-free">
-                  $0<span className="pricing-period">/month</span>
-                </div>
-              </div>
-
-              <div className="pricing-features">
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    AI Product Discovery (Limited)
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    10 Imports / month
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">Community Access</span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Basic Analytics
-                  </span>
-                </div>
-              </div>
-
-              <button className="pricing-cta-free">Start Free</button>
-            </div>
-
-            {/* Growth Plan (Highlighted) */}
-            <div className="pricing-card-highlighted">
-              <div className="pricing-badge">Most Popular</div>
-
-              <div className="pricing-plan-icon">✨</div>
-              <h3 className="pricing-plan-name">Growth</h3>
-              <p className="pricing-plan-description">Best value</p>
-
-              <div className="pricing-price-wrapper">
-                <div className="pricing-price">
-                  $49<span className="pricing-period">/month</span>
-                </div>
-              </div>
-
-              <div className="pricing-features">
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Unlimited AI Product Discovery
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    100 Imports / month
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Dashboard Analytics
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">Priority Support</span>
-                </div>
-              </div>
-
-              <button className="pricing-cta-highlighted">Start Scaling</button>
-            </div>
-
-            {/* Pro Plan */}
-            <div className="pricing-card">
-              <div className="pricing-plan-icon">🚀</div>
-              <h3 className="pricing-plan-name">Pro</h3>
-              <p className="pricing-plan-description">For serious brands</p>
-
-              <div className="pricing-price-wrapper">
-                <div className="pricing-price">
-                  $199<span className="pricing-period">/month</span>
-                </div>
-              </div>
-
-              <div className="pricing-features">
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Unlimited Imports
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Advanced Analytics + Integrations
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Multi-Store Management
-                  </span>
-                </div>
-                <div className="pricing-feature-item">
-                  <div className="pricing-feature-check">✓</div>
-                  <span className="pricing-feature-text">
-                    Dedicated Account Manager
-                  </span>
-                </div>
-              </div>
-
-              <button className="pricing-cta-pro">Go Pro</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Section 5: Pricing Plans - Animated */}
+      <PricingSection />
 
       {/* Section 6: Final CTA */}
       <section className="final-cta-section">
@@ -621,24 +492,26 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="final-cta-buttons">
-              <button className="final-cta-primary">
-                <span>Start Free Today</span>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.5 15L12.5 10L7.5 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <Link href="/auth/signup">
+                <button className="final-cta-primary">
+                  <span>Start Free Today</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 15L12.5 10L7.5 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </Link>
 
               <button className="final-cta-secondary">
                 <svg
