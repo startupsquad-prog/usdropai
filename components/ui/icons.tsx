@@ -101,7 +101,6 @@ export {
   
   // Settings & Config
   Sliders as IconSliders,
-  Toggle as IconToggle,
   Eye as IconView,
   EyeOff as IconHide,
   Lock as IconLock,
