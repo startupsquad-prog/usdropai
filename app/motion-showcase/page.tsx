@@ -6,7 +6,7 @@
  * QA tool for reviewing professional motion system
  */
 
-import { motion } from "lib/motion/motion.config";
+import { motion } from "framer-motion";
 
 export default function MotionShowcasePage() {
   return (
