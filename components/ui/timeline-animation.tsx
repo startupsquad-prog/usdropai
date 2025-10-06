@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 interface TimelineContentProps {
   children: React.ReactNode
-  as?: keyof JSX.IntrinsicElements
+  as?: keyof React.JSX.IntrinsicElements
   animationNum: number
   timelineRef: RefObject<HTMLElement>
   customVariants?: {
