@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { QueryProvider } from "@/lib/providers/query-provider";
 import { Footer } from "@/components/shared/Footer";
@@ -7,6 +7,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "USDrop - Your Dropshipping Empire Starts Here",
   description: "AI-powered dropshipping platform. Find winning products, import instantly, and scale your business faster than ever.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 0.75,
+  minimumScale: 0.75,
+  maximumScale: 2,
 };
 
 export default function RootLayout({
