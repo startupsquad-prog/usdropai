@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import PricingSection from "@/components/ui/pricing-section-2";
+import { WaitlistForm } from "@/components/waitlist-form";
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
@@ -489,6 +490,11 @@ export default function HomePage() {
             <p className="final-cta-subtext">
               Thousands are scaling smarter with USDrop Ai. Don't stay behind.
             </p>
+
+            {/* Waitlist Form */}
+            <div className="waitlist-form-container">
+              <WaitlistForm />
+            </div>
 
             {/* CTA Buttons */}
             <div className="final-cta-buttons">
