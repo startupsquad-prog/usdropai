@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase/client";
+import { createServerClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
   try {
@@ -13,6 +13,9 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    // Create server client
+    const supabase = await createServerClient();
 
     // Insert into waitlist_submissions table
     const { data, error } = await supabase
